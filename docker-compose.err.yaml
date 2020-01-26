@@ -1,0 +1,7 @@
+version: "2"
+services:
+  hello-go.golang.ubuntu-noworkdir.err:
+    image: minimage:hello-go.golang.ubuntu-noworkdir.err
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-go.golang.ubuntu-noworkdir.err

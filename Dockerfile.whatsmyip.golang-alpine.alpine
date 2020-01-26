@@ -1,0 +1,6 @@
+FROM golang:alpine
+COPY whatsmyip.go .
+RUN go build whatsmyip.go
+FROM alpine
+COPY --from=0 /go/whatsmyip .
+CMD ["./whatsmyip"]

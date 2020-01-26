@@ -1,0 +1,4 @@
+FROM golang
+COPY whatsmyip.go .
+RUN go build whatsmyip.go
+CMD ["./whatsmyip"]

@@ -1,0 +1,7 @@
+FROM golang
+COPY whatsmyip.go .
+ENV CGO_ENABLED=0
+RUN go build whatsmyip.go
+FROM scratch
+COPY --from=0 /go/whatsmyip .
+CMD ["./whatsmyip"]

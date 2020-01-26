@@ -1,0 +1,6 @@
+FROM gcc
+COPY hello.c .
+RUN gcc -o hello hello.c
+FROM alpine
+COPY --from=0 hello .
+CMD ["./hello"]

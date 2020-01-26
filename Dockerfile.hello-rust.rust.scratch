@@ -1,0 +1,6 @@
+FROM rust
+COPY hello.rs .
+RUN rustc hello.rs
+FROM scratch
+COPY --from=0 hello .
+CMD ["./hello"]

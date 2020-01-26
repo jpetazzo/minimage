@@ -1,0 +1,3 @@
+FROM python:alpine
+COPY hello.py .
+CMD ["./hello.py"]

@@ -1,0 +1,6 @@
+FROM golang
+COPY whatsmyip.go .
+RUN go build whatsmyip.go
+FROM busybox
+COPY --from=0 /go/whatsmyip .
+CMD ["./whatsmyip"]

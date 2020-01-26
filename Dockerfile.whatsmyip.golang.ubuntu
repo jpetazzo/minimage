@@ -1,0 +1,6 @@
+FROM golang
+COPY whatsmyip.go .
+RUN go build whatsmyip.go
+FROM ubuntu
+COPY --from=0 /go/whatsmyip .
+CMD ["./whatsmyip"]

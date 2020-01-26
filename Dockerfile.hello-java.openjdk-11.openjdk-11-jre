@@ -1,0 +1,6 @@
+FROM openjdk:11
+COPY hello.java .
+RUN javac hello.java
+FROM openjdk:11-jre
+COPY --from=0 hello.class .
+CMD exec java -cp . hello

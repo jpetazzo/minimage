@@ -1,0 +1,6 @@
+FROM golang
+COPY hello.go .
+RUN go build hello.go
+FROM ubuntu
+COPY --from=0 hello .
+CMD ["./hello"]

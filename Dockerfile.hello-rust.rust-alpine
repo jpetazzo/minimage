@@ -1,0 +1,4 @@
+FROM rust:alpine
+COPY hello.rs .
+RUN rustc hello.rs
+CMD ["./hello"]

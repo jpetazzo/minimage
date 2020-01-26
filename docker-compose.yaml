@@ -1,0 +1,197 @@
+version: "2"
+services:
+  hello-c.alpine.alpine:
+    image: minimage:hello-c.alpine.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.alpine.alpine
+  hello-c.alpine-static.scratch:
+    image: minimage:hello-c.alpine-static.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.alpine-static.scratch
+  hello-c.gcc:
+    image: minimage:hello-c.gcc
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.gcc
+  hello-c.gcc.alpine:
+    image: minimage:hello-c.gcc.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.gcc.alpine
+  hello-c.gcc.scratch:
+    image: minimage:hello-c.gcc.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.gcc.scratch
+  hello-c.gcc-static.alpine:
+    image: minimage:hello-c.gcc-static.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.gcc-static.alpine
+  hello-c.gcc-static.scratch:
+    image: minimage:hello-c.gcc-static.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.gcc-static.scratch
+  hello-c.gcc.ubuntu:
+    image: minimage:hello-c.gcc.ubuntu
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.gcc.ubuntu
+  hello-go.golang:
+    image: minimage:hello-go.golang
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-go.golang
+  hello-go.golang-alpine.alpine:
+    image: minimage:hello-go.golang-alpine.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-go.golang-alpine.alpine
+  hello-go.golang-alpine.scratch:
+    image: minimage:hello-go.golang-alpine.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-go.golang-alpine.scratch
+  hello-go.golang.scratch:
+    image: minimage:hello-go.golang.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-go.golang.scratch
+  hello-go.golang.scratch-string:
+    image: minimage:hello-go.golang.scratch-string
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-go.golang.scratch-string
+  hello-go.golang.ubuntu-workdir:
+    image: minimage:hello-go.golang.ubuntu-workdir
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-go.golang.ubuntu-workdir
+  hello-java.amazoncorretto:
+    image: minimage:hello-java.amazoncorretto
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.amazoncorretto
+  hello-java.java:
+    image: minimage:hello-java.java
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.java
+  hello-java.openjdk:
+    image: minimage:hello-java.openjdk
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk
+  hello-java.openjdk-11.openjdk-11-jre:
+    image: minimage:hello-java.openjdk-11.openjdk-11-jre
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk-11.openjdk-11-jre
+  hello-java.openjdk-8.openjdk-8-jre-alpine:
+    image: minimage:hello-java.openjdk-8.openjdk-8-jre-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk-8.openjdk-8-jre-alpine
+  hello-java.openjdk-alpine:
+    image: minimage:hello-java.openjdk-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk-alpine
+  hello-java.openjdk.openjdk-8-jre-alpine:
+    image: minimage:hello-java.openjdk.openjdk-8-jre-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk.openjdk-8-jre-alpine
+  hello-java.openjdk.openjdk-jre:
+    image: minimage:hello-java.openjdk.openjdk-jre
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk.openjdk-jre
+  hello-py.python:
+    image: minimage:hello-py.python
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-py.python
+  hello-py.python-alpine:
+    image: minimage:hello-py.python-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-py.python-alpine
+  hello-rust.rust:
+    image: minimage:hello-rust.rust
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-rust.rust
+  hello-rust.rust-alpine:
+    image: minimage:hello-rust.rust-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-rust.rust-alpine
+  hello-rust.rust.alpine:
+    image: minimage:hello-rust.rust.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-rust.rust.alpine
+  hello-rust.rust-alpine.alpine:
+    image: minimage:hello-rust.rust-alpine.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-rust.rust-alpine.alpine
+  hello-rust.rust.busybox-glibc:
+    image: minimage:hello-rust.rust.busybox-glibc
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-rust.rust.busybox-glibc
+  hello-rust.rust.debian:
+    image: minimage:hello-rust.rust.debian
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-rust.rust.debian
+  hello-rust.rust.scratch:
+    image: minimage:hello-rust.rust.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-rust.rust.scratch
+  whatsmyip.golang:
+    image: minimage:whatsmyip.golang
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang
+  whatsmyip.golang.alpine:
+    image: minimage:whatsmyip.golang.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang.alpine
+  whatsmyip.golang-alpine.alpine:
+    image: minimage:whatsmyip.golang-alpine.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang-alpine.alpine
+  whatsmyip.golang.busybox:
+    image: minimage:whatsmyip.golang.busybox
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang.busybox
+  whatsmyip.golang.busybox-glibc:
+    image: minimage:whatsmyip.golang.busybox-glibc
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang.busybox-glibc
+  whatsmyip.golang-nocgo.scratch:
+    image: minimage:whatsmyip.golang-nocgo.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang-nocgo.scratch
+  whatsmyip.golang.scratch:
+    image: minimage:whatsmyip.golang.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang.scratch
+  whatsmyip.golang.ubuntu:
+    image: minimage:whatsmyip.golang.ubuntu
+    build:
+      context: .
+      dockerfile: Dockerfile.whatsmyip.golang.ubuntu
