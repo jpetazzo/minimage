@@ -12,6 +12,12 @@ This repository contains some sample code:
 
 And a bunch of Dockerfiles to build that code.
 
+
+## Wow that's a lot of Dockerfiles
+
+The goal is to show many combinations of build and run
+stages: do they work? What's the size of the final image?
+
 Each Dockerfile has a pretty long name, with the following convention:
 
 `Dockerfile.PROGRAM-TO-BUILD.BUILD-IMAGE[.RUN-IMAGE]`
