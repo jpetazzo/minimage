@@ -1,0 +1,7 @@
+FROM python:alpine
+RUN apk add build-base freetype-dev
+RUN pip install matplotlib
+RUN pip install numpy
+RUN pip install pandas
+COPY pyds.py .
+CMD ["./pyds.py"]

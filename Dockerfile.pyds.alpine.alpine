@@ -1,0 +1,16 @@
+FROM python:alpine
+RUN apk add build-base freetype-dev
+WORKDIR /wheels
+RUN pip wheel matplotlib
+RUN pip wheel numpy
+RUN pip wheel pandas
+
+FROM python:alpine
+COPY --from=0 /wheels /wheels
+RUN apk add freetype libstdc++
+RUN pip install --no-index --find-links=/wheels matplotlib
+RUN pip install --no-index --find-links=/wheels numpy
+RUN pip install --no-index --find-links=/wheels pandas
+
+COPY pyds.py .
+CMD ["./pyds.py"]

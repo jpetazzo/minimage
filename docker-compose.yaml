@@ -155,6 +155,26 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.hello-rust.rust.scratch
+  pyds.alpine:
+    image: minimage:pyds.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.pyds.alpine
+  pyds.alpine.alpine:
+    image: minimage:pyds.alpine.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.pyds.alpine.alpine
+  pyds.python:
+    image: minimage:pyds.python
+    build:
+      context: .
+      dockerfile: Dockerfile.pyds.python
+  pyds.python-slim:
+    image: minimage:pyds.python-slim
+    build:
+      context: .
+      dockerfile: Dockerfile.pyds.python-slim
   whatsmyip.golang:
     image: minimage:whatsmyip.golang
     build:
