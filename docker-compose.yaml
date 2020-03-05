@@ -1,5 +1,10 @@
 version: "2"
 services:
+  hello-c.alpine:
+    image: minimage:hello-c.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-c.alpine
   hello-c.alpine.alpine:
     image: minimage:hello-c.alpine.alpine
     build:
