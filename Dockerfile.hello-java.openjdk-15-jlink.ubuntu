@@ -1,0 +1,10 @@
+FROM openjdk:15
+COPY hello.java .
+RUN javac hello.java
+RUN jdeps --print-module-deps hello.class > java.modules
+RUN jlink --strip-debug --add-modules $(cat java.modules) --output /java
+
+FROM ubuntu
+COPY --from=0 /java /java
+COPY --from=0 hello.class .
+CMD exec /java/bin/java -cp . hello

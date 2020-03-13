@@ -95,6 +95,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.hello-java.openjdk-11.openjdk-11-jre
+  hello-java.openjdk-15-alpine-jlink.alpine:
+    image: minimage:hello-java.openjdk-15-alpine-jlink.alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk-15-alpine-jlink.alpine
+  hello-java.openjdk-15-jlink.ubuntu:
+    image: minimage:hello-java.openjdk-15-jlink.ubuntu
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.openjdk-15-jlink.ubuntu
   hello-java.openjdk-8.openjdk-8-jre-alpine:
     image: minimage:hello-java.openjdk-8.openjdk-8-jre-alpine
     build:
