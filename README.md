@@ -3,6 +3,20 @@
 Examples and experiments with multi-stage builds, static binaries, and
 other techniques to obtain MINimal IMAGEs.
 
+This repository contains code samples and Dockerfiles
+to illustrate a series of blog posts about image size
+optimization. You can read this series in English:
+[part 1](https://www.ardanlabs.com/blog/2020/02/docker-images-part1-reducing-image-size.html),
+[part 2](https://www.ardanlabs.com/blog/2020/02/docker-images-part2-details-specific-to-different-languages.html),
+[part 3](https://www.ardanlabs.com/blog/2020/04/docker-images-part3-going-farther-reduce-image-size.html);
+or in French:
+[part 1](https://enix.io/fr/blog/cherie-j-ai-retreci-docker-part1/),
+[part 2](https://enix.io/fr/blog/cherie-j-ai-retreci-docker-part2/),
+[part 3](https://enix.io/fr/blog/cherie-j-ai-retreci-docker-part3/).
+
+
+## Ingredients
+
 This repository contains some sample code:
 - hello.c: hello world in C
 - hello.go: hello world in Go
