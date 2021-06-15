@@ -6,7 +6,7 @@ import "net/http"
 import "os"
 
 func main () {
-  resp, err := http.Get("https://canihazip.com/s")
+  resp, err := http.Get("https://icanhazip.com/")
   if err != nil {
     log.Fatal(err)
   }

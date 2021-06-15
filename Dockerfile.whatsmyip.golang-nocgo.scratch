@@ -4,4 +4,5 @@ ENV CGO_ENABLED=0
 RUN go build whatsmyip.go
 FROM scratch
 COPY --from=0 /go/whatsmyip .
+COPY --from=0 /etc/ssl /etc/ssl
 CMD ["./whatsmyip"]
