@@ -190,6 +190,26 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.pyds.python-slim
+  pyyaml.python:
+    image: minimage:pyyaml.python
+    build:
+      context: .
+      dockerfile: Dockerfile.pyyaml.python
+  pyyaml.python-alpine:
+    image: minimage:pyyaml.python-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.pyyaml.python-alpine
+  pyyaml.python-alpine.python-alpine:
+    image: minimage:pyyaml.python-alpine.python-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.pyyaml.python-alpine.python-alpine
+  pyyaml.python-slim:
+    image: minimage:pyyaml.python-slim
+    build:
+      context: .
+      dockerfile: Dockerfile.pyyaml.python-slim
   whatsmyip.golang:
     image: minimage:whatsmyip.golang
     build:

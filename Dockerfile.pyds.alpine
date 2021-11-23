@@ -1,5 +1,5 @@
 FROM python:alpine
-RUN apk add build-base freetype-dev
+RUN apk add build-base freetype-dev jpeg-dev libzip-dev
 RUN pip install matplotlib
 RUN pip install numpy
 RUN pip install pandas

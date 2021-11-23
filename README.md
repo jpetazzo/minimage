@@ -22,6 +22,8 @@ This repository contains some sample code:
 - hello.go: hello world in Go
 - hello.py: hello world in Python
 - hello.rs: hello world in Rust
+- pyds.py: doesn't do anything except import a few data science packages
+- pyyaml.py: doesn't do anything excpet `import yaml` (PyYAML)
 - whatsmyip.go: Go code making one HTTP request to canihazip.com
 
 And a bunch of Dockerfiles to build that code.
@@ -86,6 +88,30 @@ what's wrong with the ones that show something else (like
 `docker run minimage:whatsmyip.golang.scratch`.
 
 
+## Python wheels
+
+Check the `pyds` and `pyyaml` examples to see how to leverage
+multi-stage builds with Python on Alpine. This is useful for
+Python packages that use native code. When installing these
+packages on a glibc system, Python can download pre-compiled
+versions of the packages; but on Alpine (which uses musl) Python
+cannot use the pre-compiled versions, and it must recompile.
+
+This recompilation can take a lot of time and disk space,
+especially on big data science packages like numpy, scipy,
+pandas...
+
+If you want small images with Python and data science workloads
+(or anything that requires native code), the easiest solution
+is to use `python:slim`. But if you really want to use `python:alpine`,
+you can build wheels in a first stage, and install them in a
+second stage, as is done here in `pyds` and `pyyaml`.
+
+This is not perfect (we end up copying the wheels before installing
+them, which wastes a bit of disk space), but I hope you'll find it
+helpful anyway!
+
+
 ## Extra info
 
 The Compose file is generated automatically using the script
@@ -101,4 +127,3 @@ as one build fails).
 ## Contributing
 
 If you want to add code samples or Dockerfiles, feel free to!
-

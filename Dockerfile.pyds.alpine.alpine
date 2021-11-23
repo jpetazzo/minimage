@@ -1,5 +1,5 @@
 FROM python:alpine
-RUN apk add build-base freetype-dev
+RUN apk add build-base freetype-dev jpeg-dev libzip-dev
 WORKDIR /wheels
 RUN pip wheel matplotlib
 RUN pip wheel numpy

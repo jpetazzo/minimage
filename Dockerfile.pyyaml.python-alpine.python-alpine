@@ -1,0 +1,9 @@
+FROM python:alpine
+WORKDIR /wheels
+RUN pip wheel pyyaml
+
+FROM python:alpine
+COPY --from=0 /wheels /wheels
+RUN pip install --no-index --find-links=/wheels pyyaml
+COPY pyyaml.py .
+CMD ./pyyaml.py

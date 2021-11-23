@@ -1,0 +1,4 @@
+FROM python:alpine
+RUN pip install pyyaml
+COPY pyyaml.py .
+CMD ./pyyaml.py
