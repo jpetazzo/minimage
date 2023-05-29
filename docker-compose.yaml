@@ -80,11 +80,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.hello-java.amazoncorretto
-  hello-java.java:
-    image: minimage:hello-java.java
-    build:
-      context: .
-      dockerfile: Dockerfile.hello-java.java
   hello-java.openjdk:
     image: minimage:hello-java.openjdk
     build:
