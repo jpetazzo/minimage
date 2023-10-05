@@ -80,6 +80,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.hello-java.amazoncorretto
+  hello-java.eclipse-temurin.native-image.scratch:
+    image: minimage:hello-java.eclipse-temurin.native-image.scratch
+    build:
+      context: .
+      dockerfile: Dockerfile.hello-java.eclipse-temurin.native-image.scratch
   hello-java.openjdk:
     image: minimage:hello-java.openjdk
     build:

@@ -1,0 +1,11 @@
+FROM eclipse-temurin:17
+COPY hello.java .
+RUN javac hello.java
+
+FROM ghcr.io/graalvm/native-image
+COPY --from=0 hello.class .
+RUN native-image hello --no-fallback --static
+
+FROM scratch
+COPY --from=1 /app/hello .
+CMD ["./hello"]
